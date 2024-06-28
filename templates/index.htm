@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Heart Disease Prediction System</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+<center>
+ <div class="login">
+	<h1>Heart Disease Prediction System</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+
+    	<input type="text" name="Age" placeholder="Age" required="required" />
+        <br>
+        <input type="text" name="Sex" placeholder="Sex" required="required" />
+		<br>
+        <input type="text" name="Chest_Pain" placeholder="Chest_Pain_Type" required="required" />
+        <br>
+        <input type="text" name="Blood_Pressure" placeholder="Resting_Blood_pressure" required="required" />
+		<br>
+        <input type="text" name="Cholesterol" placeholder="Serum_Cholesterol" required="required" />
+        <br>
+        <input type="text" name="Blood_Sugar" placeholder="Fasting_Blood_Sugar" required="required" />
+        <br>
+        <input type="text" name="ECG" placeholder="Resting_ECG" required="required" />
+        <br>
+        <input type="text" name="Heart_Rate" placeholder="Maximum_Heart_Rate" required="required" />
+        <br>
+        <input type="text" name="Angina" placeholder="Exercise_Induced_Angina" required="required" />
+        <br>
+        <input type="text" name="Old_Peak" placeholder="ST depression induced by exercise" required="required" />
+        <br>
+        <input type="text" name="Slope" placeholder="Slope of the peak exercise ST segment" required="required" />
+        <br>
+        <input type="text" name="Vesseles" placeholder="Number of major vessels (0-3)" required="required" />
+        <br>
+        <input type="text" name="Thal" placeholder="Thal" required="required" />
+        <br>
+       
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+
+   <br>
+   <br>
+   <p>{{ prediction_text }}</p>
+
+ </div>
+
+</center>
+</body>
+</html>
